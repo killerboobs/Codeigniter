@@ -107,3 +107,23 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 ## Running CodeIgniter Tests
 
 Information on running the CodeIgniter test suite can be found in the [README.md](tests/README.md) file in the tests directory.
+
+
+
+## Vesion with Tilewind
+npm install -D tailwindcss
+npx tailwindcss init
+
+- tailwind.config.js ADD
+content: [
+    './app/Views/**/*.php', // Adjust this path according to where your views are located
+  ],
+
+- package.json ADD
+
+"scripts": {
+  "build:css": "npx tailwindcss -i ./public/assets/css/tailwind.css -o ./public/assets/css/style.css --watch"
+}
+
+- npm run build:css
+
